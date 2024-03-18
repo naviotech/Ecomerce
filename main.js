@@ -392,8 +392,11 @@ eliminarTodo.addEventListener("click",()=>{
     numItems.textContent = listaCarrito.length;
     let price = precioTotal.firstElementChild;
     price.textContent = 0;
-    let totalPagar = grandTotal.firstElementChild.firstElementChild.firstElementChild;
-    totalPagar.textContent = 0;
+    if(grandTotal != null){
+        let totalPagar = grandTotal.firstElementChild.firstElementChild.firstElementChild;
+        totalPagar.textContent = 0;
+    }
+    
     crearHtml();
 })
 if(compras != null){
