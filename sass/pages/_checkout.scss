@@ -1,0 +1,561 @@
+.checkout{
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $negro;
+        .container-header{
+            max-width: 1440px;
+            width: 100%;
+            padding: 32px 24px 32px 24px;
+            @include breakpoint("tablet"){
+                padding: 32px 40px;
+            }
+            @include breakpoint("desktop"){
+                padding:52px 140px;
+            }
+            nav{
+                @include breakpoint("desktop"){
+                    display: grid;
+                    grid-template-areas: 
+                    "primero segundo tercero";
+
+                    .logoPrincipal{
+                        grid-area: primero;
+                    }
+                    .mobilDesplegable{
+                        grid-area: segundo;
+                    }
+                    .icon-shopping{
+                        grid-area: tercero;
+                    }
+                    grid-template-columns: 0.5fr 1fr 0fr;
+                    align-items: center;
+                }
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                
+                .icon-nav-mobile{
+                    text-decoration: none;
+                    color: white;
+                    font-size: 1.5rem;
+                    @include breakpoint("desktop"){
+                        display:none;
+                    }
+                }
+                .icon-close{
+                    text-decoration: none;
+                    color: white;
+                    font-size: 1.5rem;
+                    color: red;
+                    @include breakpoint("desktop"){
+                        display:none;
+                    }
+                }
+                .mobilDesplegable{
+                    @include breakpoint("desktop"){
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: initial;
+                        padding:0%;
+                        position: relative;
+                        top: auto;
+                        width: auto;
+                        height: auto;
+                        background-color: $negro;
+                    }
+                    z-index: 2;
+                    list-style: none;
+                    display: none;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap:30px;
+                    position: absolute;
+                    left:0%;
+                    top:150%;
+                    background-color: $blanco;
+                    padding: 40px ;
+                    width: 100%;
+                    @include breakpoint("tablet"){
+                        width: 60%;
+                    }
+                    height: 50vh;
+                    border-radius: 8px;
+                    a{
+                        @include breakpoint("desktop"){
+                            color:$blanco;
+                            font-size: 0.8rem;
+                            padding: 0%;
+                            font-weight: normal;
+                        }
+                        color:$negro;
+                        text-decoration: none;
+                        font-weight: bold;
+                        font-size: 18px;
+                        padding: 8px 24px;
+                        width: 100%;
+                        
+                        &:hover{
+                            background-color:$naranja ;
+                            @include breakpoint("desktop"){
+                                background-color: $negro;
+                                color:$naranja;
+                            }
+                        }
+                    }
+                }
+                .icon-shopping{
+                    position: relative;
+                    text-decoration: none;
+                    color: white;
+                    font-size: 1.5rem;
+                    &::after{
+                        content:attr(data-content);
+                        text-align: center;
+                        vertical-align: center;
+                        font-size: 1rem;
+                        padding: 1px 4px 4px 4px;
+                        border-radius: 50%;
+                        right: -80%;
+                        top: -50%;
+                        background-color: $naranja;
+                        position: absolute;
+                        z-index: 3px;
+                    }
+                }
+                .carrito{
+                    z-index: 1;
+                    position: relative;
+                    display: none;
+                    flex-direction: column;
+                    position: absolute;
+                    background-color:$blanco;
+                    right:0%;
+                    top:150%;
+                    width: 100%;
+                    @include breakpoint("tablet"){
+                        width: 60%;
+                    }
+                    @include breakpoint("desktop"){
+                        width: 35%;
+                    }
+                    height: auto;
+                    padding: 32px 28px;
+                    border-radius: 8px;
+                    .cabecera{
+                        display: flex;
+                        background-color: $blanco;
+                        justify-content: space-between;
+                        align-items: center;
+                        h2{
+                            font-size: 1rem;
+                        }
+                        p{
+                            &:hover{
+                                color:$naranja;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    div{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 24px;
+                        .precio{
+                            color:$negro;
+                            font-weight: bold;
+                        }
+                    }
+                    a{
+                        
+                        text-align: center;
+                        position:sticky;
+                        bottom: 0;
+                        text-decoration: none;
+                        color:$blanco;
+                        padding:15px 30px;
+                        background-color: $naranja;
+                        &:hover{
+                            background-color: $naranja-hover;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    main{
+        background-color: #F2F2F2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        div{
+            
+            max-width: 1440px;
+            width: 100%;
+            @include breakpoint("tablet"){
+                padding: 32px 40px;
+            }
+            @include breakpoint("desktop"){
+                padding:32px 140px;
+            }
+            padding: 24px;
+            a{
+                text-decoration: none;
+                color: #6e6e6e;
+                &:hover{
+                    color: $naranja;
+                }
+            }
+        }
+        .container-main{
+            max-width: 1440px;
+            width: 100%;
+            @include breakpoint("tablet"){
+                padding: 32px 40px;
+            }
+            @include breakpoint("desktop"){
+                padding:32px 140px;
+                display: grid;
+                grid-template-columns: 1.4fr 0.8fr;
+                .summary{
+                    height: min-content;
+                }
+            }
+            width: 100%;
+            padding:30px 24px;
+            display: flex;
+            flex-direction: column;
+            gap:32px;
+            .contenedor-formulario{
+                padding:24px;
+                @include breakpoint("tablet"){
+                    padding: 30px 27px;
+                }
+                background-color: #FFFFFF;
+                border-radius: 8px;
+                h1{
+                    margin-bottom: 32px;;
+                }
+                #formulario{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 32px;
+                    padding: 5px;
+
+                    @include breakpoint("tablet"){
+                        #primeraParte{
+                            display:grid;
+                            grid-template-columns: 1fr 1fr;
+                            column-gap: 16px;
+                        }
+                    }
+                    @include breakpoint("tablet"){
+                        #segundaParte{
+                            display:grid;
+                            column-gap: 16px;
+                            grid-template-areas: 
+                            "address address"
+                            "code city"
+                            "country .";
+                            .direccion{
+                                grid-area: address;
+                            }
+                            .codigoPostal{
+                                grid-area: code;
+                            }
+                            .ciudad{
+                                grid-area: city;
+                            }
+                            .pais{
+                                grid-area: country;
+                            }
+                        }
+                    }
+                    fieldset{
+                        border:none;
+
+                        legend{
+                            font-size: 0.7rem;
+                            color:$naranja;
+                            margin-bottom: 16px;
+                        }
+                        div{
+                            margin-bottom: 10px;
+                            padding: 0%;
+                            display: flex;
+                            flex-direction: column;
+                            gap:5px;
+                            
+                            label{
+                                font-size: 0.6rem;
+                                font-weight: bold;
+                            }
+                            input{
+                                padding:10px 24px;
+                                border-radius: 8px;
+                                border: 1px solid #6e6e6e;
+                                font-weight: bold;
+                                &:is(input):invalid{
+                                    outline-color: red;
+                                }
+                                &:is(input):valid{
+                                    
+                                    outline-color:green ;
+                                }
+                                &::placeholder{
+                                    font-weight: bold;
+                                    color: #6e6e6ebd;
+                                }
+                            }
+                        }
+                    }
+                    .terceraParte{
+                        @include breakpoint("tablet"){
+                            #terceraParte{
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                column-gap: 16px;
+                            }
+                        }
+                        h3{
+                            font-size: 0.6rem;
+                            margin-bottom: 10px;
+                        }
+                        .metodoPago{
+                            label{
+                                border: 1px solid #6e6e6e;
+                                border-radius: 8px;
+                                padding:10px 24px;
+                                margin-bottom: 5px;
+                                display: flex;
+                                gap:10px;
+                                font-weight: bold;
+                                input{
+                                    accent-color: $naranja;
+                                }
+                            }
+                        }
+                        .paymentTargeta{
+                            display: flex;
+                            flex-direction: column;
+                            @include breakpoint("tablet"){
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                column-gap: 16px;
+                            }
+                        }
+                        .infoCash{
+                            margin-top: 20px;
+                            display: none;
+                            flex-direction: initial;
+                            gap:10px;
+                            justify-content: center;
+                            align-items: center;
+                            p{
+                                font-size: 0.7rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .summary{
+                width: 100%;
+                padding:30px 24px;
+                @include breakpoint("tablet"){
+                    padding: 33px;
+                }
+                display: flex;
+                flex-direction: column;
+                gap:20px;
+                background-color: #FFFFFF;
+                border-radius: 8px;
+                .totalSinImpuestos{
+                    margin-top: 20px;
+                    padding: 0%;
+                    .totalSinImpuestos{
+                        display: flex;
+                        justify-content: space-between;
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+                }
+                .shipping{
+                    padding: 0%;
+                    .shipping{
+                        display: flex;
+                        justify-content: space-between;
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+                }
+                .vat{
+                    padding: 0%;
+                    .vat{
+                        display: flex;
+                        justify-content: space-between;
+                        span{
+                            font-weight: bold;
+                        }
+                    }
+                }
+                .grandTotal{
+                    margin-top: 10px;
+                    padding:0%;
+                    .grandTotal{
+                        display: flex;
+                        justify-content: space-around;
+                        span{
+                            font-weight: bold;
+                            color:$naranja;
+                        }
+                    }
+                }
+                button{
+                    &:disabled{
+                        opacity: 0.5;
+                        cursor: not-allowed;
+                        &:hover{
+                            background-color:$naranja;
+                            
+                        }
+                    }
+                    cursor: pointer;
+                    text-align: center;
+                    border:none;
+                    bottom: 0;
+                    text-decoration: none;
+                    color:$blanco;
+                    padding:15px 30px;
+                    background-color: $naranja;
+                    &:hover{
+                        background-color: $naranja-hover;
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: $negro;
+        &::before{
+            content:"";
+            margin-left: auto;
+            margin-right: auto;
+            width: 25%;
+            height: 5px;
+            background-color: $naranja;
+            position: absolute;
+            top: 0.001%;
+            right: 38%;
+            z-index: 3px;
+        }
+        .container-footer{
+            max-width: 1440px;
+            width: 100%;
+            @include breakpoint("tablet"){
+                padding: 52px 40px;
+                justify-content: start;
+                align-items: start;
+            }
+            @include breakpoint("desktop"){
+                padding:75px 140px;
+            }
+            padding: 52px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap:48px;
+            header{
+                @include breakpoint("tablet"){
+                    align-items: start;
+                }
+                @include breakpoint("desktop"){
+                    width: 100%;
+                    flex-direction: initial;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap:48px;
+                nav{
+                    @include breakpoint("tablet"){
+                        flex-direction: initial;
+                        align-items: start;
+                        justify-content: start;
+                        
+                    }
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap:16px;
+                    @include breakpoint("desktop"){
+                        gap:34px;
+                    }
+                    a{
+                        text-decoration: none;
+                        color:white;
+                        font-size: 0.8rem;
+                        font-weight: bold;
+                        letter-spacing: 0.5vh;
+                        &:hover{
+                            color:$naranja;
+                        }
+                    }
+                }
+            }
+            div{
+                @include breakpoint("tablet"){
+                    text-align: start;
+                }
+                @include breakpoint("desktop"){
+                    width: 50%;
+                    gap: 56px;
+                }
+                text-align: center;
+                color:#6e6e6e;
+                display: flex;
+                flex-direction: column;
+                gap:32px;
+            }
+            .contacto{
+                @include breakpoint("tablet"){
+                    
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                display: flex;
+                flex-direction: initial;
+                justify-content: center;
+                align-items: center;
+                @include breakpoint("desktop"){
+                    gap:24px;
+                }
+                a{
+                    text-decoration: none;
+                    font-size: 2rem;
+                    color: $blanco;
+                    &:hover{
+                        transform: scale(1.2);
+                        color:$naranja;
+                    }
+                }
+            }
+        }
+    }
+}

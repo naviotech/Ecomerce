@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><!--Para que sepa la codificacion que tiene que utilizar-->
+    <title>Mi pagina web</title><!--Es el titulo que aparece en la pestaña de nuestra web-->
+    <meta name="description" content="Mi pagina web de prueba para empezar con
+    desarrollo frontend"><!--Esta es la descripcion de nuestra web que aparecera en el buscador como introduccion del contenido de nuestra web-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!--Se utiliza para que el ancho del contenido sea el ancho de la pantalla del navegador-->
+  
+    <meta name="theme-color" content="#fafafa"> <!--Esto es para cambiar el color de arriba de las pestañas predeterminado del navegador-->
+  
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+  
+    <link rel="canonical" href="index.html"><!--Sirve para indicar al buscador cual es la pagina principal-->
+  
+    <link rel="icon" type="image/png" href="img/dev1.jpg" ><!--Para añadir foto(favicon) logo de nuestra web-->
+  
+    <link rel="stylesheet" href="css/style.css"><!--Para añadir los estilos css del fichero style creado-->
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    
+    <script defer type="module" src="/main.js"></script>
+  </head>
+  <body class="checkout">
+    <header>
+      <section class="container-header">
+        <nav>
+          <a href="#" class="icon-nav-mobile" aria-label="Desplegable mobil"></a>
+          <ul class="mobilDesplegable" >
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="headphones.html">HEADPHONES</a></li>
+            <li><a href="speakers.html">SPEAKERS</a></li>
+            <li><a href="earphones.html">EARPHONES</a></li>
+          </ul>
+          <figure><a href="index.html"><img src="img/logo-web.svg"></a></figure>
+          
+          <a href="#" class="icon-shopping" data-content="0" aria-label="Desplegable carrito"></a>
+          <div class="carrito">
+            <header class="cabecera">
+              <h2>CART (<span>0</span>)</h2>
+              <p class="eliminarCarrito">Remove all</p>
+            </header>
+            <section class="lista">
+            </section>
+            <div>
+              <p>Total</p>
+              <p class="precio">$<span>0</span></p>
+            </div>
+            <a href="#" aria-label="link al carrito">CHECKOUT</a>
+          </div>
+          
+        </nav>
+      </section>
+    </header>
+    <main>
+      <div><a href="index.html">Go Back</a></div>
+      <section class="container-main">
+        <section class="contenedor-formulario">
+          <h1>CHECKOUT</h1>
+          <form id="formulario" name="checkout" enctype="utf-8" autocomplete="on" method="get">
+            <fieldset class="primeraParte">
+              <legend>BILLING DETAILS</legend>
+              <div id="primeraParte">
+                <div class="nombre">
+                  <label for="nombre">Name</label>
+                  <input type="text" name="nombre" id="nombre" placeholder="Alexei Ward" required>
+                </div>
+                <div class="correo">
+                  <label for="email">Email Address</label>
+                  <input type="email" name="email" id="email" placeholder="alexei@mail.com"  required>
+                </div>
+                <div class="tel">
+                  <label for="telefono">Phone Number</label>
+                  <input type="tel" name="telefono" id="telefono" placeholder="645673283" required>
+                </div>
+              </div>
+              
+            </fieldset>
+            <fieldset class="segundaParte">
+              <legend>SHIPPING INFO</legend>
+              <div id="segundaParte">
+                <div class="direccion">
+                  <label for="adress">Your Address</label>
+                  <input type="text" name="adress" id="adress" placeholder="1137 Williams Avenue" required>
+                </div>
+                <div class="codigoPostal">
+                  <label for="code">ZIP Code</label>
+                  <input type="number" name="code" id="code" maxlength="5" placeholder="10001" required>
+                </div>
+                <div class="ciudad">
+                  <label for="city">City</label>
+                  <input type="text" name="city" id="city" placeholder="New York" required>
+                </div>
+                <div class="pais">
+                  <label for="country">Country</label>
+                  <input type="text" name="country" id="country" placeholder="United States" required>
+                </div>
+              </div>
+              
+            </fieldset>
+            <fieldset class="terceraParte">
+              <legend>PAYMENT DETAILS</legend>
+              <div id="terceraParte">
+                <h3>Payment Method</h3>
+                <div class="metodoPago">
+                  <label><input id="payment" type="radio" name="payment" checked >e-Money</label>
+                  <label><input id="delivery" type="radio" name="payment">Cash on Delivery</label>
+                </div>
+              </div>
+              
+              <div class="paymentTargeta">
+                <div>
+                  <label for="target">e-Money Number</label>
+                  <input type="number" id="target" maxlength="16" class="noValido" placeholder="2385 2199 2453 3531" required>
+                </div>
+                <div>
+                  <label for="secretNumber">e-Money PIN</label>
+                  <input type="number" id="secretNumber" class="noValido" maxlength="4" placeholder="891" required>
+                </div>
+              </div>
+              <div class="infoCash">
+                <figure><img src="img/img-mobile/imgformulario.svg" alt="imagen sobre cash"></figure>
+                <p>The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.</p>
+              </div>
+            </fieldset>
+            
+          </form>
+        </section>
+        <section class="summary">
+          <h2>SUMMARY</h2>
+          <article class="contenido-summary">
+          </article>
+          <div class="totalSinImpuestos">
+            <p class="totalSinImpuestos">TOTAL <span>$ <span>0</span> </span></p>
+          </div>
+          <div class="shipping">
+            <p class="shipping">SHIPPING <span>$ <span>0</span> </span></p>
+          </div>
+          <div class="vat">
+            <p class="vat">VAT (INCLUDED) <span>$ <span>0</span> </span></p>
+          </div>
+          <div class="grandTotal">
+            <p class="grandTotal">GRAND TOTAL <span>$ <span>0</span> </span></p>
+          </div>
+          <button id="buttonSummary" disabled popovertarget="popover">CONTINUE & PAY</button>
+        </section>
+        
+      </section>
+      <section>
+        <div id="popover" popover="manual">
+          <div class="contenedorPopover">
+            <a href="#" class="icon-check"></a>
+            <h2>THANK YOU FOR YOUR ORDER</h2>
+            <p>You will receive an email confirmation shortly.</p>
+            <div id="order">
+              <article id="contenido-order">
+              </article>
+              <div class="grandTotalOrder">
+                <p class="grandTotalOrder">GRAND TOTAL <span>$ <span>0</span> </span></p>
+              </div>
+            </div>
+            
+            <button id="botonPopover" popovertarget="popover">BACK TO HOME</button>
+          </div>
+          
+          
+        </div>
+      </section>
+    </main>
+    <footer>
+      <section class="container-footer">
+        <header>
+          <figure><a href="index.html"><img src="img/logo-web.svg"></a></figure>
+          <nav>
+            <a href="index.html">HOME</a>
+            <a href="headphones.html">HEADPHONES</a>
+            <a href="speakers.html">SPEAKERS</a>
+            <a href="earphones.html">EARPHONES</a>
+          </nav>
+        </header>
+        <div>
+          <p>
+            Audiophile is an all in one stop to fulfill your audio needs. 
+            We're a small team of music lovers and sound specialists who are 
+            devoted to helping you get the most out of personal audio. 
+            Come and visit our demo facility - we’re open 7 days a week.
+          </p>
+          <p>
+            Copyright 2021. All Rights Reserved
+          </p>
+        </div>
+        <div class="contacto">
+          <a href="https://github.com/Mayadevv"  aria-label="link github" class="icon-github"></a>
+          <a href="https://www.linkedin.com/in/naviomaya" aria-label="link linkedin" class="icon-linkedin"></a>
+          <a href="https://discord.com/users/edumayft" aria-label="link discord" class="icon-discord"></a>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

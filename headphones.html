@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><!--Para que sepa la codificacion que tiene que utilizar-->
+    <title>Mi pagina web</title><!--Es el titulo que aparece en la pestaña de nuestra web-->
+    <meta name="description" content="Mi pagina web de prueba para empezar con
+    desarrollo frontend"><!--Esta es la descripcion de nuestra web que aparecera en el buscador como introduccion del contenido de nuestra web-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!--Se utiliza para que el ancho del contenido sea el ancho de la pantalla del navegador-->
+  
+    <meta name="theme-color" content="#fafafa"> <!--Esto es para cambiar el color de arriba de las pestañas predeterminado del navegador-->
+  
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+  
+    <link rel="canonical" href="index.html"><!--Sirve para indicar al buscador cual es la pagina principal-->
+  
+    <link rel="icon" type="image/png" href="img/dev1.jpg" ><!--Para añadir foto(favicon) logo de nuestra web-->
+  
+    <link rel="stylesheet" href="css/style.css"><!--Para añadir los estilos css del fichero style creado-->
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    
+    <script defer type="module" src="/main.js"></script>
+  </head>
+  <body class="headphones">
+    <header>
+      <section class="container-header">
+        <nav>
+          <a href="#" class="icon-nav-mobile" aria-label="Desplegable mobil"></a>
+          <ul class="mobilDesplegable" >
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="headphones.html">HEADPHONES</a></li>
+            <li><a href="speakers.html">SPEAKERS</a></li>
+            <li><a href="earphones.html">EARPHONES</a></li>
+          </ul>
+          <figure class="logoPrincipal"><a href="index.html"><img src="img/logo-web.svg"></a></figure>
+          <a href="#" class="icon-shopping" data-content="0" aria-label="Desplegable carrito"></a>
+          <div class="carrito">
+            <header class="cabecera">
+              <h2>CART (<span>0</span>)</h2>
+              <p class="eliminarCarrito">Remove all</p>
+            </header>
+            <section class="lista">
+            </section>
+            <div>
+              <p>Total</p>
+              <p class="precio">$<span>0</span></p>
+            </div>
+            <a href="checkout.html" aria-label="link al carrito">CHECKOUT</a>
+          </div>
+        </nav>
+        <hr class="separacion">
+        <article class="hero-headpones">
+          <div>
+            <h1>HEADPHONES</h1>
+          </div>
+        </article>
+      </section>
+    </header>
+    <main>
+      <section class="container-main">
+        <section class="nuevosHeadphones">
+          <article class="mark2">
+            <figure><img src="/img/img-mobile/headphones/mark2imagen.svg" alt="producto mark II"></figure>
+            <div>
+              <h3>NEW PRODUCT</h3>
+              <h2>XX99 MARK II HEADPHONES</h2>
+              <p>
+                The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.
+              </p>
+              <a href="mark2.html" aria-label="link al producto">SEE PRODUCT</a>
+            </div>
+          </article>
+          <article class="mark1">
+            <figure><img src="/img/img-mobile/headphones/mark1imagen.svg" loading="lazy" alt="producto mark I"></figure>
+            <div>
+              <h2>XX99 MARK I HEADPHONES</h2>
+              <p>
+                The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.
+              </p>
+              <a href="mark1.html" aria-label="link al producto">SEE PRODUCT</a>
+            </div>
+          </article>
+          <article class="xx59">
+            <figure><img src="/img/img-mobile/headphones/xx59imagen.svg" loading="lazy" alt="producto xx59"></figure>
+            <div>
+              <h2>XX59 HEADPHONES</h2>
+              <p>
+                Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.
+              </p>
+              <a href="xx59.html" aria-label="link al producto">SEE PRODUCT</a>
+            </div>
+          </article>
+        </section>
+        <section class="productos">
+          <article>
+            <figure><img src="/img/img-mobile/cascos.svg" loading="lazy" alt="imagen cascos"></figure>
+            <h2>HEADPHONES</h2>
+            <div>
+              <a href="headphones.html" aria-label="link a tienda"><span>SHOP</span><p class="icon-chevron-right"></p></a>
+            </div>
+          </article>
+          <article>
+            <figure><img src="/img/img-mobile/altavoz.svg" loading="lazy" alt="imagen de altavoz"></figure>
+            <h2>SPEAKERS</h2>
+            <div>
+              <a href="speakers.html" aria-label="link a tienda"><span>SHOP</span><p class="icon-chevron-right"></p></a>
+            </div>
+          </article>
+          <article>
+            <figure><img src="/img/img-mobile/earphones.svg" loading="lazy" alt="imagen  de auriculares"/></figure>
+            <h2>EARPHONES</h2>
+            <div>
+              <a href="earphones.html" aria-label="link a tienda"><span>SHOP</span><p class="icon-chevron-right"></p></a>
+            </div>
+          </article>
+        </section>
+        <section class="info">
+          <picture>
+            <source media="(width > 1200px)" srcset="/img/img-desktop/index/man.jpg">
+            <source media="(width > 767px)" srcset="/img/img-tablet/index/man.jpg">
+            <img src="/img/img-mobile/man-index.jpg" loading="lazy" alt="imagen hombre">
+          </picture>
+          <div>
+          <div>
+            <h2>BRINGING YOU THE <span>BEST</span> AUDIO GEAR</h2>
+            <p>
+              Located at the heart of New York City, Audiophile is the premier 
+              store for high end headphones, earphones, speakers, and audio 
+              accessories. We have a large showroom and luxury demonstration 
+              rooms available for you to browse and experience a wide range of 
+              our products. 
+            </p>
+            <p>
+              Stop by our store to meet some of the fantastic 
+              people who make Audiophile the best place to buy your portable 
+              audio equipment.
+            </p>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <section class="container-footer">
+        <header>
+          <figure><a href="index.html"><img src="img/logo-web.svg" loading="lazy" alt="logo"></a></figure>
+          <nav>
+            <a href="index.html">HOME</a>
+            <a href="headphones.html">HEADPHONES</a>
+            <a href="speakers.html">SPEAKERS</a>
+            <a href="earphones.html">EARPHONES</a>
+          </nav>
+        </header>
+        <div>
+          <p>
+            Audiophile is an all in one stop to fulfill your audio needs. 
+            We're a small team of music lovers and sound specialists who are 
+            devoted to helping you get the most out of personal audio. 
+            Come and visit our demo facility - we’re open 7 days a week.
+          </p>
+          <p>
+            Copyright 2021. All Rights Reserved
+          </p>
+        </div>
+        <div class="contacto">
+          <a href="https://github.com/Mayadevv"  aria-label="link github" class="icon-github"></a>
+          <a href="https://www.linkedin.com/in/naviomaya" aria-label="link linkedin" class="icon-linkedin"></a>
+          <a href="https://discord.com/users/edumayft" aria-label="link discord" class="icon-discord"></a>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

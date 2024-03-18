@@ -1,0 +1,200 @@
+html * {
+    font-family: $manrove;
+}
+
+body {
+    overflow-x: hidden;
+    font-size: 16px;
+    
+} 
+
+.listaCarrito{
+    margin-top: 20px;
+    margin-bottom: 0px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    
+    .cabeceraCarrito{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0%;
+        gap: 10px;
+        .figureCarrito{
+            background-color: $gris;
+            display: flex;
+            justify-content: center;
+            border-radius: 8px;
+            padding: 10px;
+            img{
+                width: 25px;
+            }
+        }
+        .headerCabeceraCarrito{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: flex-end;
+            margin: 0%;
+            
+            h3{
+                font-weight: normal;
+                font-size: 1rem;
+            }
+            p{
+                color: grey;
+            }
+        }
+    }
+    .cantidadProducto{
+        .cantidad{
+            display: flex;
+            align-items: center;
+            gap:20px;
+            padding: 10px 15px 10px 15px;
+            .icon-minus , .icon-plus{
+                font-size: 10px;
+                padding: 0%;
+                background-color: $gris;
+                color:$negro;
+                &:hover{
+                    background-color: $gris;
+                    color:$naranja;
+                }
+            }
+            color: $negro;
+            background-color: $gris;
+        }
+    }
+    
+}
+
+.contenidoCarritoSummary{
+    padding: 0%!important;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    display:flex;
+    justify-content: space-between!important;
+    align-items: center;
+    align-content: center;
+    
+    .cabeceraCarritoSummary{
+        padding:0%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin: 0%;
+        gap: 10px;
+        .figureCarritoSummary{
+            background-color: $gris;
+            display: flex;
+            justify-content: center;
+            border-radius: 8px;
+            padding: 10px;
+            img{
+                width: 25px;
+            }
+        }
+        .headerCabeceraCarritoSummary{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: flex-end;
+            margin: 0%;
+            h3{
+                font-weight: bold;
+                font-size: 1rem;
+            }
+            p{
+                color: grey;
+            }
+        }
+    }
+    .cantidadProductoSummary{
+        padding:0%;
+        width: 20%;
+        display: flex;
+        justify-content: flex-end;
+        .cantidadSummary{
+            color: grey;
+            font-weight: bold;
+        }
+    }
+}
+
+[popover]{
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 0);
+    @include breakpoint("tablet"){
+        padding: 32px 115px !important;
+    }
+    @include breakpoint("desktop"){
+        padding:32px 450px !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contenedorPopover{
+        #order, .grandTotalOrder{
+            padding: 0% !important;
+        }
+        div.grandTotalOrder{
+            margin-top: 20px;
+            p{
+                display: flex !important;
+                justify-content: space-between !important;
+                width: 100%;
+                span{
+                    
+                    font-weight: bold;
+                    color: $negro;
+                }
+            }
+            
+        }
+        width: 100%;
+        padding: 24px;
+        border-radius: 8px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap:32px;
+        a{
+            padding: 15px;
+            background-color: $naranja;
+            border-radius: 50%;
+            font-size: 2rem;
+        }
+        p{
+            color: #6e6e6ebd;
+        }
+        
+        #botonPopover{
+            width: 100%;
+            cursor: pointer;
+            text-align: center;
+            border:none;
+            bottom: 0;
+            text-decoration: none;
+            color:$blanco;
+            padding:15px 30px;
+            background-color: $naranja;
+            &:hover{
+                background-color: $naranja-hover;
+            }
+        }
+    }
+    &::backdrop{
+        background: #000a;
+        backdrop-filter: blur(2px);
+    }
+}

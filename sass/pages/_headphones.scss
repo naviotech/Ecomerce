@@ -1,0 +1,718 @@
+.headphones{
+    header{
+        background-color: $negro;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .container-header{
+            max-width: 1440px;
+            width: 100%;
+            @include breakpoint("tablet"){
+                padding: 32px 40px;
+            }
+            @include breakpoint("desktop"){
+                padding:52px 140px;
+                
+            }
+            padding: 32px 24px;
+            nav{
+                
+                @include breakpoint("desktop"){
+                    display: grid;
+                    grid-template-areas: 
+                    "primero segundo tercero";
+                    
+                    .logoPrincipal{
+                        grid-area: primero;
+                    }
+                    .mobilDesplegable{
+                        grid-area: segundo;
+                    }
+                    .icon-shopping{
+                        grid-area: tercero;
+                    }
+                    grid-template-columns: 0.5fr 1fr 0fr;
+                    align-items: center;
+                }
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 32px;
+                .icon-nav-mobile{
+                    text-decoration: none;
+                    color: white;
+                    font-size: 1.5rem;
+                    @include breakpoint("desktop"){
+                        display:none;
+                    }
+                }
+                .icon-close{
+                    @include breakpoint("desktop"){
+                        display: none;
+                    }
+                    text-decoration: none;
+                    color: white;
+                    font-size: 1.5rem;
+                    color: red;
+                }
+                .mobilDesplegable{
+                    @include breakpoint("desktop"){
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: initial;
+                        padding:0%;
+                        position: relative;
+                        top: auto;
+                        width: auto;
+                        height: auto;
+                        background-color: $negro;
+                    }
+                    z-index: 2;
+                    list-style: none;
+                    display: none;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap:30px;
+                    position: absolute;
+                    left:0%;
+                    top:150%;
+                    background-color: $blanco;
+                    padding: 40px ;
+                    width: 100%;
+                    @include breakpoint("tablet"){
+                        width: 60%;
+                    }
+                    height: 50vh;
+                    border-radius: 8px;
+                    a{
+                        @include breakpoint("desktop"){
+                            color:$blanco;
+                            font-size: 0.8rem;
+                            padding: 0%;
+                            font-weight: normal;
+                        }
+                        color:$negro;
+                        text-decoration: none;
+                        font-weight: bold;
+                        font-size: 18px;
+                        padding: 8px 24px;
+                        width: 100%;
+                        
+                        &:hover{
+                            background-color:$naranja ;
+                            @include breakpoint("desktop"){
+                                background-color: $negro;
+                                color:$naranja;
+                            }
+                        }
+                    }
+                }
+                .icon-shopping{
+                    position: relative;
+                    text-decoration: none;
+                    color: white;
+                    font-size: 1.5rem;
+                    &::after{
+                        content:attr(data-content);
+                        text-align: center;
+                        vertical-align: center;
+                        font-size: 1rem;
+                        padding: 1px 4px 4px 4px;
+                        border-radius: 50%;
+                        right: -80%;
+                        top: -50%;
+                        background-color: $naranja;
+                        position: absolute;
+                        z-index: 3px;
+                    }
+                }
+                .carrito{
+                    z-index: 1;
+                    position: relative;
+                    display: none;
+                    flex-direction: column;
+                    position: absolute;
+                    background-color:$blanco;
+                    right:0%;
+                    top:150%;
+                    width: 100%;
+                    @include breakpoint("tablet"){
+                        width: 60%;
+                    }
+                    @include breakpoint("desktop"){
+                        width: 35%;
+                    }
+                    height: auto;
+                    padding: 32px 28px;
+                    border-radius: 8px;
+                    .cabecera{
+                        display: flex;
+                        background-color: $blanco;
+                        justify-content: space-between;
+                        align-items: center;
+                        h2{
+                            font-size: 1rem;
+                        }
+                        p{
+                            &:hover{
+                                color:$naranja;
+                            }
+                            cursor: pointer;
+                        }
+                    }
+                    div{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 24px;
+                        .precio{
+                            color:$negro;
+                            font-weight: bold;
+                        }
+                    }
+                    a{
+                        
+                        text-align: center;
+                        position:sticky;
+                        bottom: 0;
+                        text-decoration: none;
+                        color:$blanco;
+                        padding:15px 30px;
+                        background-color: $naranja;
+                        &:hover{
+                            background-color: $naranja-hover;
+                        }
+                    }
+                }
+            }
+            .separacion{
+                background-color: #6e6e6e;
+                color: #6e6e6e;
+            }
+            article{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                
+                div{
+                    @include breakpoint("tablet"){
+                        padding: 90px 200px;
+                        
+                    }
+                    @include breakpoint("desktop"){
+                        padding: 58px;
+                    }
+                    padding: 20px 24px 0px 24px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 24px;
+                    
+                    h1{
+                        color: $blanco;
+                        font-size: 2rem;
+                        @include breakpoint("tablet"){
+                            font-size: 2.5rem;
+                        }
+                    }
+                    
+                    
+                }
+            }
+        }
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .container-main{
+            max-width: 1440px;
+            width: 100%;
+            padding:92px 24px;
+            @include breakpoint("tablet"){
+                padding: 92px 40px;
+            }
+            @include breakpoint("desktop"){
+                padding:180px 140px;
+            }
+            .nuevosHeadphones{
+                display: flex;
+                flex-direction: column;
+                gap:120px;
+                .mark2{
+                    @include breakpoint("desktop"){
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        column-gap: 125px;
+                    }
+                    display: flex;
+                    flex-direction: column;
+                    gap:32px;
+                    figure{
+                        background-color: $gris;
+                        border-radius: 8px;
+                        padding: 40px 54px 68px 54px;
+                        text-align: center;
+                        img{
+                            @include breakpoint("tablet"){
+                                width: 20vh;
+                            }
+                            @include breakpoint("desktop"){
+                                width: 90%;
+                            }
+                            width: 100%;
+                            filter: drop-shadow(0px 38px 23px rgba(0, 0, 0, 0.574))
+                        }
+                    }
+                    div{
+                        @include breakpoint("desktop"){
+                            align-items: start;
+                            justify-content: center;
+                        }
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap:24px;
+                        h3{
+                            color: $naranja;
+                            font-size: 1rem;
+                            letter-spacing:1dvh;
+                            font-weight: normal;
+                        }
+                        h2{
+                            font-size: 2rem;
+                            @include breakpoint("tablet"){
+                                padding: 0px 150px;
+                            }
+                            @include breakpoint("desktop"){
+                                padding:0px;
+                                width: 60%;
+                                text-align: start;
+                            }
+                        }
+                        p{
+                            color: #6e6e6e;
+                            @include breakpoint("tablet"){
+                                padding: 0px 60px;
+                            }
+                            @include breakpoint("desktop"){
+                                padding:0px;
+                                width: 90%;
+                                text-align: start;
+                            }
+                        }
+                        a{
+                            
+                            width: max-content;
+                            text-decoration: none;
+                            color:$blanco;
+                            padding:15px 30px;
+                            background-color: $naranja;
+                            &:hover{
+                            background-color: $naranja-hover;
+                            }
+                        }
+                    }
+                }
+                .mark1{
+                    @include breakpoint("desktop"){
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        column-gap: 125px;
+                        grid-template-areas: "info imagen";
+                        figure{
+                            grid-area: imagen;
+                        }
+                        div{
+                            grid-area:info;
+                        }
+                    }
+                    display: flex;
+                    flex-direction: column;
+                    gap:32px;
+                    figure{
+                        background-color: $gris;
+                        border-radius: 8px;
+                        padding: 40px 54px 68px 54px;
+                        text-align: center;
+                        img{
+                            @include breakpoint("tablet"){
+                                width: 20vh;
+                            }
+                            @include breakpoint("desktop"){
+                                width: 90%;
+                            }
+                            width: 80%;
+                            filter: drop-shadow(0px 38px 23px rgba(0, 0, 0, 0.574))
+                        }
+                    }
+                    div{
+                        @include breakpoint("desktop"){
+                            align-items: start;
+                            justify-content: center;
+                        }
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap:24px;
+                        h3{
+                            color: $naranja;
+                            font-size: 1rem;
+                            letter-spacing:1dvh;
+                            font-weight: normal;
+                        }
+                        h2{
+                            font-size: 2rem;
+                            @include breakpoint("tablet"){
+                                padding: 0px 150px;
+                                
+                            }
+                            @include breakpoint("desktop"){
+                                padding:0px;
+                                width: 60%;
+                                text-align: start;
+                            }
+                        }
+                        p{
+                            color: #6e6e6e;
+                            @include breakpoint("tablet"){
+                                padding: 0px 60px;
+                            }
+                            @include breakpoint("desktop"){
+                                padding:0px;
+                                width: 90%;
+                                text-align: start;
+                            }
+                        }
+                        a{
+                            
+                            width: max-content;
+                            text-decoration: none;
+                            color:$blanco;
+                            padding:15px 30px;
+                            background-color: $naranja;
+                            &:hover{
+                            background-color: $naranja-hover;
+                            }
+                        }
+                    }
+                }
+                .xx59{
+                    @include breakpoint("desktop"){
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        column-gap: 125px;
+                        margin-bottom: 240px ;
+                    }
+                    display: flex;
+                    flex-direction: column;
+                    gap:32px;
+                    margin-bottom: 120px;
+                    figure{
+                        background-color: $gris;
+                        border-radius: 8px;
+                        padding: 40px 54px 68px 54px;
+                        text-align: center;
+                        img{
+                            @include breakpoint("tablet"){
+                                width: 20vh;
+                            }
+                            @include breakpoint("desktop"){
+                                width: 90%;
+                            }
+                            width: 100%;
+                            filter: drop-shadow(0px 38px 23px rgba(0, 0, 0, 0.574))
+                        }
+                    }
+                    div{
+                        @include breakpoint("desktop"){
+                            align-items: start;
+                            justify-content: center;
+                        }
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap:24px;
+                        h3{
+                            color: $naranja;
+                            font-size: 1rem;
+                            letter-spacing:1dvh;
+                            font-weight: normal;
+                        }
+                        h2{
+                            @include breakpoint("desktop"){
+                                padding:0px;
+                                width: 60%;
+                                text-align: start;
+                            }
+                            font-size: 2rem;
+                        }
+                        p{
+                            color: #6e6e6e;
+                            @include breakpoint("tablet"){
+                                padding: 0px 60px;
+                            }
+                            @include breakpoint("desktop"){
+                                padding:0px;
+                                width: 90%;
+                                text-align: start;
+                            }
+                        }
+                        a{
+                            
+                            width: max-content;
+                            text-decoration: none;
+                            color:$blanco;
+                            padding:15px 30px;
+                            background-color: $naranja;
+                            &:hover{
+                            background-color: $naranja-hover;
+                            }
+                        }
+                    }
+                }
+            }
+            .productos{
+                @include breakpoint("tablet"){
+                    display: flex;
+                    flex-direction: initial;
+                    gap:10px;
+                }
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap:86px;
+                article{
+                    @include breakpoint("tablet"){
+                        min-width: 225px;
+                        min-height: 246px;
+                        width: 100%;
+                    }
+                    @include breakpoint("desktop"){
+                        min-width: 301px;
+                        min-height: 182px;
+                        width: 100%;   
+                    }
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                    background-color: $gris;
+                    border-radius: 12px;
+                    padding-bottom: 22px;
+                    figure{
+                        img{
+                            filter:drop-shadow(0px 38px 23px rgba(0, 0, 0, 0.574));
+                        }
+                        margin-top: -55px;
+                        margin-bottom: 35px;
+                    }
+                    h2{
+                        font-size: 1rem;
+                    }
+                    div{
+                        margin-top: 20px;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        gap: 10px;
+                        a{
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: center;
+                            gap: 10px;
+                            text-decoration: none;
+                            span{
+                                color: #6e6e6e;
+                            }
+                            color: $naranja;
+                            &:hover{
+                                color:$naranja;
+                            }
+                            &:hover span{
+                                color:$naranja;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .info{
+            @include breakpoint("desktop"){
+                display: grid;
+                grid-template-areas: "info imagen";
+                grid-template-columns: 1fr 1fr;
+                picture{
+                    grid-area: imagen;
+                }
+                div{
+                    grid-area:info;
+                }
+                margin-top: 160px;
+            }
+            margin-top:120px;
+            display: flex;
+            flex-direction: column;
+            gap:40px;
+            picture{
+                width: cover;
+                img{
+                    width: 100%
+                }
+            }
+            div{
+                @include breakpoint("tablet"){
+                    padding: 0px 40px;
+                }
+                @include breakpoint("desktop"){
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: start;
+                }
+                text-align: center;
+                h2{
+                    @include breakpoint("tablet"){
+                        font-size: 2.5rem;
+                    }
+                    @include breakpoint("desktop"){
+                        font-size: 2rem;
+                    }
+                    font-size: 2rem;
+                    span{
+                        color:$naranja;
+                    }
+                    margin-bottom: 32px;
+                }
+            }
+            p{
+                color:#6e6e6e;
+            }
+        }
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: $negro;
+        &::before{
+            content:"";
+            margin-left: auto;
+            margin-right: auto;
+            width: 25%;
+            height: 5px;
+            background-color: $naranja;
+            position: absolute;
+            top: 0.001%;
+            right: 38%;
+            z-index: 3px;
+        }
+        .container-footer{
+            max-width: 1440px;
+            
+            @include breakpoint("tablet"){
+                padding: 52px 40px;
+                justify-content: start;
+                align-items: start;
+            }
+            @include breakpoint("desktop"){
+                padding:75px 140px;
+            }
+            padding: 52px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap:48px;
+            header{
+                @include breakpoint("tablet"){
+                    align-items: start;
+                }
+                @include breakpoint("desktop"){
+                    width: 100%;
+                    flex-direction: initial;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap:48px;
+                nav{
+                    @include breakpoint("tablet"){
+                        flex-direction: initial;
+                        align-items: start;
+                        justify-content: start;
+                        
+                    }
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap:16px;
+                    @include breakpoint("desktop"){
+                        gap:34px;
+                    }
+                    a{
+                        text-decoration: none;
+                        color:white;
+                        font-size: 0.8rem;
+                        font-weight: bold;
+                        letter-spacing: 0.5vh;
+                        &:hover{
+                            color:$naranja;
+                        }
+                    }
+                }
+            }
+            div{
+                @include breakpoint("tablet"){
+                    text-align: start;
+                }
+                @include breakpoint("desktop"){
+                    width: 50%;
+                    gap: 56px;
+                }
+                text-align: center;
+                color:#6e6e6e;
+                display: flex;
+                flex-direction: column;
+                gap:32px;
+            }
+            .contacto{
+                @include breakpoint("tablet"){
+                    
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                display: flex;
+                flex-direction: initial;
+                justify-content: center;
+                align-items: center;
+                @include breakpoint("desktop"){
+                    gap:24px;
+                }
+                a{
+                    text-decoration: none;
+                    font-size: 2rem;
+                    color: $blanco;
+                    &:hover{
+                        transform: scale(1.2);
+                        color:$naranja;
+                    }
+                }
+            }
+        }
+    }
+}
