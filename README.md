@@ -41,4 +41,4 @@ Simula el pago de la orden seleccionada.
 
 ## Link al Proyecto
 
-[¡Visita el Proyecto Aquí!](https://shoppingcartmayadevv.netlify.app/)
+[¡Visita el Proyecto Aquí!](https://ecomerce-mayadevv.netlify.app/)
