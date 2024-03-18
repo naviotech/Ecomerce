@@ -257,6 +257,9 @@
 .home header .container-header nav .carrito .cabecera p:hover {
   color: #D87D4A;
 }
+.home header .container-header nav .carrito .headerCabeceraCarrito {
+  background: white;
+}
 .home header .container-header nav .carrito div {
   display: flex;
   justify-content: space-between;
