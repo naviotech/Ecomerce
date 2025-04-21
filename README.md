@@ -2,7 +2,7 @@
 
 <img src="https://github.com/Mayadevv/Ecomerce/blob/main/img%20ecomerce.jpg">
 
-Este proyecto es un ejemplo de un sistema de comercio electrónico desarrollado en [nombre del lenguaje/tecnología que usaste]. Permite a los usuarios explorar una variedad de productos, agregarlos a un carrito de compras, completar un formulario de datos para el envío y simular el pago de la orden seleccionada.
+Este proyecto es un ejemplo de un sistema de comercio electrónico desarrollado con javaScript. Permite a los usuarios explorar una variedad de productos, agregarlos a un carrito de compras, completar un formulario de datos para el envío y simular el pago de la orden seleccionada.
 
 ## Funcionalidades Principales
 1. Exploración de Productos: Los usuarios pueden navegar a través de una lista de productos disponibles y ver detalles como el nombre, precio y descripción.
